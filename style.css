@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    background-color: #727272;
+}
+.buttons {
+    text-align: center;
+    block-size: 0px;
+}
+#pay {
+    visibility: hidden;
+}
+button {
+    background-color: #66add6;
+    padding: 8px;
+    border: none;
+    transition-duration: 0.3s;
+}
+button:hover {
+    background-color: #4d809e;
+    border: none;
+    transition-duration: 0.3s;
+}
+#totalscreentxt {
+    font-size: 100px;
+    text-align: center;
+
+}
+#reciept {
+    visibility: hidden;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">POS - Untitled session</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p id="sename"></p>
+    <div id="pos">
+        <div class="buttons">
+            <button onclick="addItem(this.textContent)">Item S</button>
+            <p>5 €</p>
+            <button onclick="addItem(this.textContent)">Item M</button>
+            <p>9 €</p>
+            <button onclick="addItem(this.textContent)">Drink (0.3 L)</button>
+            <p>4 €</p>
+            <button onclick="addItem(this.textContent)">Drink (0.4 L)</button>
+            <p>16 €</p>
+            <button onclick="addItem(this.textContent)">Drink (0.5 L)</button>
+            <p>19 €</p>
+            <button onclick="addItem(this.textContent)">Drink (1 L)</button>
+            <p>24 €</p>
+            <button onclick="addItem(this.textContent)">Dish 1</button>
+            <p>19 €</p>
+            <button onclick="addItem(this.textContent)">Dish 2</button>
+            <p>29 €</p>
+            <button onclick="addItem(this.textContent)">Dish 3</button>
+            <p>8.5 €</p>
+            <button onclick="addCustomItem()">Custom item</button>
+            <p>? €</p>
+            <br><br>
+            <footer>
+                POS by <a href="https://matrn.dev">matrndev</a> (2020, published 2023) | <a href="https://github.com/matrndev/pos/LICENSE">LICENSE</a> | <a href="https://github.com/matrndev/pos">Source code on GitHub</a>
+            </footer>
+        </div>
+
+
+        <div class="counter">
+            <h1 id="total">Total: 0 €</h1>
+            <button onclick="pay()">Pay</button>
+            <br><br><br>
+            <table id="items">
+                <tr class="table">Ordered items:</tr>
+            </table>
+        </div>
+    </div>
+    <div id="pay">
+        <p style="text-align: center;">Total:</p>
+        <h1 id="totalscreentxt" onclick="backPOS()"></h1>
+        <p style="text-align: center;" id="paid">Paid:</p>
+        <p style="text-align: center;" id="return">To pay: 0 €</p>
+        <p>Paid: </p>
+        <input type="number" value="0" oninput="defineVal(this.value)" onchange="defineVal(this.value)">
+        <p>Name: </p>
+        <input type="text" id="nameinput" oninput="defineName(this.value)" onchange="defineName(this.value)">
+        <button id="backPOS" style="visibility: hidden;" onclick="backPOS()">Return to POS</button>
+        <button id="givereciept" onclick="giveReciept()" style="visibility: hidden;">Reciept</button>
+    </div>
+
+    <div id="reciept">
+        <h1 id="reciepttitle" style="text-align: center;"></h1>
+        <p id="recieptcontent" style="text-align: center;"></p>
+        <table id="reciepttable" style="text-align: center;">
+
+        </table>
+        <p id="recieptfooter" style="text-align: center;"></p>
+    </div>
+</body>
+
+</html>
